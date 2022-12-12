@@ -1,0 +1,177 @@
+For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+
+var obj= [
+    {Name:"Haritha", age:25, place:"chennai"},
+    {Name:"Remifa", age:26, place:"chennai"},
+    {Name: "Gokul", age:26,place:"chennai"},
+]
+
+// using for loop:
+for(i=0; i<obj.length; i++){
+    user=obj[i]
+    console.log(`
+        Name: ${user.Name}
+        Age: ${user.age}
+        place: ${user.place}
+        `
+    );
+}
+
+
+// using forIn loop:
+
+for (var index in obj) {
+    user=obj[index];
+    console.log(`
+        Name: ${user.Name}
+        Age: ${user.age}
+        place: ${user.place}
+        `
+    );
+
+}
+
+// using forOf loop:
+
+for(var index of obj){
+    console.log(`
+        Name: ${index.Name}
+        Age; ${index.age}
+        place: ${index.place}
+        `
+        );
+}
+
+// using forEach loop:
+obj.forEach((user)=> {
+    console.log(`
+        Name: ${user.Name}
+        Age: ${user.age}
+        place: ${user.place}
+        `
+    );
+
+}
+
+
+
+OUTPUT:
+// USING FOR LOOP
+        Name: Haritha
+        Age: 25
+        place: chennai
+        
+app.js:10 
+        Name: Remifa
+        Age: 26
+        place: chennai
+        
+app.js:10 
+        Name: Gokul
+        Age: 26
+        place: chennai
+
+// USING FORIN LOOP:        
+app.js:33 
+        Name: Haritha
+        Age: 25
+       place: chennai
+        
+app.js:33 
+        Name: Remifa
+        Age: 26
+      place: chennai
+        
+app.js:33 
+        Name: Gokul
+        Age: 26
+        place: chennai
+
+// USING FOROF LOOP:
+app.js:45 
+        Name: Haritha
+        Age; 25
+        place: chennai
+        
+app.js:45 
+        Name: Remifa
+        Age; 26
+      place: chennai
+        
+app.js:45 
+        Name: Gokul
+        Age; 26
+       place: chennai
+
+// USING FOREACH LOOP        
+app.js:20 
+        Name: Haritha
+        Age: 25
+        place: chennai
+       
+        
+app.js:20 
+        Name: Remifa
+        Age: 26
+        place: chennai
+        
+app.js:20 
+        Name: Gokul
+        Age: 26
+       place: chennai
+
+ 2      Create your own resume data in JSON format
+ let resume={
+    name: "HARITHA",
+    age: "25",
+    sscDetails: {
+        schoolName: "Zion Matriculation higher secondary schooL",
+        pasingYr:"2012",
+        percentage:"88%",
+    },
+    HSCDetails:{
+        schoolName: "Zion Matriculation higher secondary school",
+        pasingYr:"2014",
+        percentage:"81%",
+        place: "chennai"
+    },
+    graduationDetails:{
+        instituteName: "psvp",
+        place: "Chennai",
+        pasingYr:"2018",
+        percentage:"75%",
+        dept:"EEE",
+    },
+    skills:{
+        Java,c++,javascript,
+    },
+    declaration:{
+        hereby ,i declare all he above details are true .
+    }
+   console.log(resume)
+
+   output:
+   Name: HARITHA
+    age: 25
+    sscDetails:
+        schoolName: Zion Matriculation higher secondary school
+        passingYr:2012
+        percentage:88%
+        place:chennai
+    
+    HSCDetails:
+        schoolName: Zion Matriculation higher secondary school
+        passingYr:2014
+        percentage:81%
+        place:chennai
+
+    graduationDetails:
+        instituteName: psvpc
+        passingYr:2018
+        percentage:74%
+        dept:EEE
+    skills:
+        java,c++,javascript  
+    declaration:
+        hereby ,i declare all he above details are true .  
